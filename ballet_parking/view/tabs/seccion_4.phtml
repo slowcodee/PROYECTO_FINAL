@@ -1,0 +1,58 @@
+<style>
+.buggd{
+
+    position: absolute;
+    visibility: collapse;
+
+}
+</style>
+<div id="content" style="padding-left: 0px;" class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>ACTUALIZAR</th>
+            <th>matricula</th>
+            <th>color</th>
+            <th>modelo</th>
+            <th>año</th>
+            <th>marca</th>
+            <th>kilometraje</th>
+            <th>soat</th>
+            <th>tecno_mecanica</th>
+            <th>derechos_rodamiento</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($filas = $resultado->fetch()) { ?>
+            <tr>
+                <td>
+                    <form action="?seccion=4#registro" method="post">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['derechos_rodamiento']; ?>" name="derechos_rodamiento">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['tecno_mecanica']; ?>" name="tecno_mecanica">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['soat']; ?>" name="soat">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['kilometraje']; ?>" name="kilometraje">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['marca']; ?>" name="marca">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['año']; ?>" name="año">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['modelo']; ?>" name="modelo">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['color']; ?>" name="color">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['id_vehiculo']; ?>" name="id_vehiculo">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['matricula']; ?>" name="matricula">
+                        <input type="submit" class="btn btn-primary" value="Editar" name="valor">
+                    </form>
+               </td>
+
+                <td><?php echo $filas['matricula']; ?></td>
+                <td><?php echo $filas['color']; ?></td>
+                <td><?php echo $filas['modelo']; ?></td>
+                <td><?php echo $filas['año']; ?></td>
+                <td><?php echo $filas['marca']; ?></td>
+                <td><?php echo $filas['kilometraje']; ?></td>
+                <td><?php echo $filas['soat']; ?></td>
+                <td><?php echo $filas['tecno_mecanica']; ?></td>
+                <td><?php echo $filas['derechos_rodamiento']; ?></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+</div>

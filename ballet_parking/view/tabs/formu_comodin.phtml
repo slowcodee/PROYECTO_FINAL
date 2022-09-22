@@ -1,0 +1,14 @@
+<div style="width: 100%; text-align: center;" id="registro" class="col-md-12">
+    <h1>Actualizar datos de : <?php echo $_POST['cedula'];?></h1>
+    <form action="?seccion=6&registro_p=3" method="post">
+
+        <input class="bg-primary" type="text" value="<?php echo $_POST['codigo'];?>" name="codigo">
+        <input type="text" value="<?php echo $_POST['nivel_gasolina'];?>" name="nivel_gasolina">
+        <input type="text" value="<?php echo $_POST['notas'];?>" name="notas">    
+
+        <input class=" btn btn-primary" type="submit" value="ACTUALIZAR">
+
+    </form>
+
+
+</div>

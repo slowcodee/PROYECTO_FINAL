@@ -1,0 +1,18 @@
+<div style="width: 100%; text-align: center;" id="registro" class="col-md-12">
+    <h1>Actualizar datos de : <?php echo $_POST['nombre'];?></h1>
+    <form action="?seccion=3&registro_p=1" method="post">
+
+        <br><span>numeral:</span><br><input type="text" value="<?php echo $_POST['id_persona'];?>" name="id_persona">
+        <br><span>nombre:</span><br><input type="text" value="<?php echo $_POST['nombre'];?>" name="nombre">
+        <br><span>apellido:</span><br><input type="text" value="<?php echo $_POST['apellido'];?>" name="apellido">
+        <br><span>correo:</span><br><input type="text" value="<?php echo $_POST['correo'];?>" name="correo">
+        <br><span>tipo_licencia:</span><br><input type="text" value="<?php echo $_POST['tipo_licencia'];?>" name="tipo_licencia">
+        <br><span>fecha_ven_licen:</span><br><input type="text" value="<?php echo $_POST['fecha_ven_licen'];?>" name="fecha_ven_licen">
+        <br><span>celular:</span><br><input type="text" value="<?php echo $_POST['celular'];?>" name="celular">
+
+        <br><input class=" btn btn-primary" type="submit" value="ACTUALIZAR" name="tb_person"><br>
+
+    </form>
+
+
+</div>

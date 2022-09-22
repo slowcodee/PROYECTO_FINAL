@@ -1,0 +1,55 @@
+<style>
+.buggd{
+
+    position: absolute;
+    visibility: collapse;
+
+}
+</style>
+<div id="content" style="padding-left: 0px;" class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>ACTUALIZAR</th>
+            <th>cedula</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>correo</th>
+            <th>tipo_licencia</th>
+            <th>fecha_ven_licencia</th>
+            <th>celular</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($filas = $resultado->fetch()) { ?>
+            <tr>
+                <td>
+            
+                    <form action="?seccion=3#registro" method="post">
+
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['nombre']; ?>" name="nombre" placeholder="nombre">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['apellido']; ?>" name="apellido" placeholder="apellido">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['correo']; ?>" name="correo" placeholder="correo">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['tipo_licencia']; ?>" name="tipo_licencia" placeholder="tipo_licencia">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['fecha_ven_licen']; ?>" name="fecha_ven_licen" placeholder="fecha_ven_licen">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['celular']; ?>" name="celular" placeholder="celular">
+                        <input class="bg-primary buggd" type="text" value="<?php echo $filas['id_persona']; ?>" name="id_persona" placeholder="numeral">
+                        <input type="submit" class="btn btn-primary" value="Editar" name="fase1">
+                    
+                    </form>
+                </td>
+                <td><?php echo $filas['cedula']; ?></td>
+                <td><?php echo $filas['nombre']; ?></td>
+                <td><?php echo $filas['apellido']; ?></td>
+                <td><?php echo $filas['correo']; ?></td>
+                <td><?php echo $filas['tipo_licencia']; ?></td>
+                <td><?php echo $filas['fecha_ven_licen']; ?></td>
+                <td><?php echo $filas['celular']; ?></td>
+
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+</div>
+
+

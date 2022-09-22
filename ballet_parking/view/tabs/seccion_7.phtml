@@ -1,0 +1,18 @@
+<div id="content" style="padding-left: 0px;" class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($filas = $resultado->fetch()) { ?>
+            <tr>
+                <td><?php echo $filas['nombre']; ?></td>
+                <td><?php echo $filas['correo']; ?></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,235 @@
+
+<!-- start: Header -->
+<nav class="navbar navbar-default header">
+  <div class="col-md-12 nav-wrapper">
+    <div class="navbar-header" style="width:100%;">
+      <div class="opener-left-menu is-closed">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <a href="?seccion=2" class="navbar-brand">
+        <b>BALLET PARKING</b>
+      </a>
+
+      <ul class="nav navbar-nav navbar-right user-nav">
+        <li class="user-name"><i class='fa fa-key'></i><span><?php echo " ".$_SESSION['nombres']; ?></span></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end: Header -->
+
+<div class="container-fluid mimin-wrapper">
+
+  <!-- start:Left Menu -->
+  <div id="left-menu">
+    <div class="sub-left-menu scroll">
+      <ul class="nav nav-list">
+        <li>
+          <div class="left-bg"></div>
+        </li>
+        <li class="time">
+          <h1 class="animated fadeInLeft">21:00</h1>
+          <p class="animated fadeInRight">Sat,October 1st 2029</p>
+        </li>
+        <li class="active ripple">
+          <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Formulario
+            <span class="fa-angle-right fa right-arrow text-right"></span>
+          </a>
+          <ul class="nav nav-list tree">
+            <li><a href="" data-toggle="modal" data-target="#exampleModal001">Registro Vehiculos</a></li>
+            <li><a href="" data-toggle="modal" data-target="#exampleModal002">Registro Personas</a></li>
+            <!-- <li><a href="" data-toggle="modal" data-target="#exampleModal003">Registro xComodin</a></li> -->
+            <li><a href="?seccion=5">Guardia</a></li>
+          </ul>
+      
+          <li><a href="?seccion=3"><span class="fa fa-address-book"></span> Personas</a></li>
+          <li><a href="?seccion=4"><span class="fa fa-automobile"></span> Vehiculos</a></li>
+          <li><a href="?seccion=6"><span class="fa fa-edit"></span> xComodin</a></li>
+          <li><a href="?seccion=7"><span class="fa fa-edit"></span> Guardias</a></li>
+          
+
+          <li><a href="cerrar_session.php?sep=1">Cerrar Session</a></li>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!-- end: Left Menu -->
+  
+
+  <!-- start: content -->
+  
+
+    <!-- Aquí va el contenido de de la vista principal -->
+    <?php
+      $tab;
+    ?>
+
+  
+  <!-- end: content -->
+
+
+  <!-- start: right menu -->
+
+  <!-- end: right menu -->
+
+</div>
+
+<!-- start: Mobile  reverse-->
+<div id="mimin-mobile" <?php if($_GET['seccion']!=2) { ?>class="reverse"<?php } ?> <?php if($_GET['seccion']==2) { ?>style="background-color: rgb(255, 102, 86); z-index: 99; width: 100%;" <?php } ?>>
+  <div class="mimin-mobile-menu-list">
+
+    <div class="col-md-12 sub-mimin-mobile-menu-list animated fadeInLeft"<?php if($_GET['seccion']==2) { ?> style="overflow: hidden; outline: none; cursor: -webkit-grab; display: block;"<?php } ?>>
+
+      <ul class="nav nav-list" style="text-align: center;">
+      <a class="tree-toggle nav-header col-md-12" style="margin-top: 50px;"><li style="color: #fff;"><i class='fa fa-key'></i><span><?php echo $_SESSION['nombres']; ?></span></li></a>
+      <li class="col-md-12" style="margin-bottom: 20px;"><a href="cerrar_session.php?sep=1">Cerrar Session</a></li>
+      <li class="active ripple">
+          <a class="tree-toggle nav-header">
+            <span class="fa-home fa"></span>Registros
+            <span class="fa-angle-right fa right-arrow text-right"></span>
+          </a>
+          <ul style="display: block;" class="nav nav-list tree">
+            <li><a style="width: 100%;" class="col-md-12" href="" data-toggle="modal" data-target="#exampleModal001">Registro Vehiculos</a></li>
+            <li><a style="width: 100%;" class="col-md-12" href="" data-toggle="modal" data-target="#exampleModal002">Registro Personas</a></li>
+            <!-- <li><a style="width: 100%;" class="col-md-12" href="" data-toggle="modal" data-target="#exampleModal003">Registro xComodin</a></li> -->
+            <li class="col-md-12"><a href="?seccion=5"><span class="fa fa-drivers-license"></span> Reg Guardia</a></li>
+          </ul>
+        </li>
+          <li class="col-md-12"><a href="?seccion=3"><span class="fa fa-address-book"></span> Personas</a></li>
+          <li class="col-md-12"><a href="?seccion=4"><span class="fa fa-automobile"></span> Vehiculos</a></li>
+          <!-- <li class="col-md-12"><a href="?seccion=6"><span class="fa fa-edit"></span> xComodin</a></li> -->
+          <li class="col-md-12"><a href="?seccion=7"><span class="fa fa-edit"></span> Guardias</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<button id="mimin-mobile-menu-opener" class="animated rubberBand btn btn-circle btn-danger">
+  <span class="fa fa-bars"></span>
+</button>
+<!-- end: Mobile -->
+<!-- start modal -->
+<div class="modal fade" id="exampleModal001" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SISTEMA DE REGISTRO BALLET PARKING</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Vehiculo</li>
+      </ul>
+      <form class="form-wrapper" action="?seccion=2&re=3" method="post">
+
+        <fieldset class="section is-active">
+          <h3>Vehiculo</h3>
+          <input type="text" name="matricula" id="matricula" placeholder="Matricula">
+          <input type="text" name="color" id="color" placeholder="Color">
+          <input type="text" name="modelo" id="modelo" placeholder="Modelo">
+          <input type="text" name="año" id="año" placeholder="Año">
+          <input type="text" name="marca" id="marca" placeholder="Marca">
+          <input type="text" name="kilometraje" id="kilometraje" placeholder="Kilometraje">
+          <br><span>Soat:</span><br><input style="width: 50%;" type="date" name="soat" id="soat" placeholder="Soat"><br>
+          <br><span>Tecno Mecanica:</span><br><input style="width: 50%;" type="date" name="tecnomecanica" id="tecnomecanica" placeholder="Tecno Mecanica"><br>         
+          <br><span>Derechos de rodamiento:</span><br><input style="margin-bottom: 20px; width: 50%;" type="date" name="derechosRodamiento" id="derechosRodamiento" placeholder="Derechos de rodamiento"><br>
+          <input id="enlace" style="position: static;" class="submit button" type="submit" value="Terminar" name="enviarVehiculo"><br>
+        </fieldset>
+      </form>
+      </div>
+
+
+        <!-- <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form> -->
+
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="exampleModal002" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SISTEMA DE REGISTRO BALLET PARKING</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Persona</li>
+      </ul>
+      <form class="form-wrapper" action="?seccion=2&regis=2" method="post">
+        <fieldset class="section is-active">
+          <h3>Informacion persona</h3>
+          <input type="text" name="cedula" id="cedula" placeholder="Cedula">
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+          <input type="text" name="celular" id="celular" placeholder="Telefono">
+          <input type="text" name="correo" id="correo" placeholder="Correo">
+          <input type="text" name="tpLicencia" id="tpLicencia" placeholder="Tipo de licencia">
+          <br><span>Vencimiento licencia</span><br><input style="margin-bottom: 20px; width: 50%;" type="date" name="vnLicencia" id="vnLicencia" placeholder="Vencimiento licencia"><br>
+          <input id="enlace" style="position: static;" class="submit button" type="submit" value="Terminar" name="enviarPersona">
+        </fieldset>
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="exampleModal003" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SISTEMA DE REGISTRO BALLET PARKING</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Formulario</li>
+      </ul>
+      <form class="form-wrapper" action="?seccion=2&register=1" method="post">
+        <fieldset class="section is-active">
+          <h3>Formulario</h3>
+          <input type="text" name="nivelGasolina" id="nivelGasolina" placeholder="Nivel de la gasolina">
+          <input type="text" name="nota" id="nota" placeholder="Nota">
+          <input type="text" name="kilom" id="kilom" placeholder="Kilometraje">
+          <input id="enlace" style="position: static;" class="submit button" type="submit" value="Terminar" name="enviarComodin">
+        </fieldset>
+      </form>
+      </div>
+
+
+        <!-- <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form> -->
+
+    </div>
+  </div>
+</div>
+<!-- end modal -->

@@ -1,0 +1,63 @@
+<div id="content" style="padding-left: 0px;" class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>ACTUALIZAR</th>
+            <th>cedula</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>correo</th>
+            <th>tipo_licencia</th>
+            <th>celular</th>
+            <th>matricula</th>
+            <th>color</th>
+            <th>modelo</th>
+            <th>año</th>
+            <th>marca</th>
+            <th>kilometraje</th>
+            <th>soat</th>
+            <th>tecno_mecanica</th>
+            <th>derechos_rodamiento</th>
+            <th>nivel_gasolina</th>
+            <th>notas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($filas = $resultado->fetch()) { ?>
+            <tr>
+                <td>
+                        <input type="submit" class="btn <?php if ($filas['estado'] == 2) {
+                                                            echo "btn-success";
+                                                        } else if ($filas['estado'] == 1) {
+                                                            echo "btn-warning";
+                                                        }  ?>" value="<?php if ($filas['estado'] == 2) {
+                                                                                                                                                                                    echo "SALIÓ";
+                                                                                                                                                                                } else {
+                                                                                                                                                                                    echo "INGRESÓ";
+                                                                                                                                                                                }  ?>" name="valor">
+                        <input class="vari" style="color: black; position: absolute; top: -9999px;" type="text" value="" >
+
+                </td>
+                <td><?php echo $filas['cedula']; ?></td>
+                <td><?php echo $filas['nombre']; ?></td>
+                <td><?php echo $filas['apellido']; ?></td>
+                <td><?php echo $filas['correo']; ?></td>
+                <td><?php echo $filas['tipo_licencia']; ?></td>
+                <td><?php echo $filas['celular']; ?></td>
+                <td><?php echo $filas['matricula']; ?></td>
+                <td><?php echo $filas['color']; ?></td>
+                <td><?php echo $filas['modelo']; ?></td>
+                <td><?php echo $filas['año']; ?></td>
+                <td><?php echo $filas['marca']; ?></td>
+                <td><?php echo $filas['kilometraje']; ?></td>
+                <td><?php echo $filas['soat']; ?></td>
+                <td><?php echo $filas['tecno_mecanica']; ?></td>
+                <td><?php echo $filas['derechos_rodamiento']; ?></td>
+                <td><?php echo $filas['nivel_gasolina']; ?></td>
+                <td><?php echo $filas['notas']; ?></td>
+                
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,111 @@
+
+----------------------------******** /// ********----------------------------
+
+Este archivo fue creado con el fin de comprender de manera mas sencilla la 
+Lectura y ejecucion del archivo control.php que se encuentra en la ruta
+controller/control.php el cual es el que gestiona todo el sistema.
+
+----------------------------******** /// ********----------------------------
+
+$sentencia = $_GET['seccion'];
+
+se han creado 11 secciones para el correcto funcionamiento del sistema
+
+$sentencia==1
+/**
+* 
+* Gestiona la vista inicio sesion de rol super ADMIN 
+*
+* 
+*
+*/
+
+$sentencia==2
+/**
+* 
+* Valida el inicio de sesion y gestiona la sesion correspondiente
+* Muestra un menu y lista de datos general
+* 
+*
+*/
+
+$sentencia==3
+/**
+* 
+* Se gestiona la vista y actualizacion de la bd tb_personas
+* 
+* 
+*
+*/
+
+$sentencia==4
+/**
+* 
+* Se gestiona la vista y actualizacion de la bd tb_vehiculos
+* 
+* 
+*
+*/
+
+$sentencia==5
+/**
+* 
+* Se gestiona la vista y registro de rol guardia
+* 
+* 
+*
+*/
+
+$sentencia==6
+/**
+* 
+* Se gestiona la vista y registro de rol super ADMIN
+* 
+* 
+*
+*/
+
+$sentencia==7
+/**
+* 
+* Se gestiona la vista y consulta de la tabla tb_sub_guardia
+* 
+* 
+*
+*/
+
+$sentencia==8
+/**
+* 
+* Se gestiona la vista y cambio de contraseña de rol super ADMIN
+* 
+* 
+*
+*/
+
+$sentencia==9
+/**
+* 
+* Se gestiona la vista y cambio de contraseña de rol guardia
+* 
+* 
+*
+*/
+
+$sentencia==10
+/**
+* 
+* Gestiona la vista inicio sesion de rol guardia
+* 
+* 
+*
+*/
+
+$sentencia==11
+/**
+* 
+* Valida el inicio de sesion y gestiona la sesion correspondiente
+* Registra informacion basica para ingreso de datos
+* 
+*
+*/

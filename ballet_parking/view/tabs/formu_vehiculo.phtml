@@ -1,0 +1,20 @@
+<div style="width: 100%; text-align: center;" id="registro" class="col-md-12">
+    <h1>Actualizar datos de : <?php echo $_POST['matricula'];?></h1>
+    <form action="?seccion=4&registro_p=2" method="post">
+
+        <br><span>numeral:</span><br><input type="text" value="<?php echo $_POST['id_vehiculo'];?>" name="id_vehiculo">
+        <br><span>derechos_rodamiento:</span><br><input type="text" value="<?php echo $_POST['derechos_rodamiento'];?>" name="derechos_rodamiento">
+        <br><span>tecno_mecanica</span><br><input type="text" value="<?php echo $_POST['tecno_mecanica'];?>" name="tecno_mecanica">
+        <br><span>soat:</span><br><input type="text" value="<?php echo $_POST['soat'];?>" name="soat">
+        <br><span>kilometraje:</span><br><input type="text" value="<?php echo $_POST['kilometraje'];?>" name="kilometraje">
+        <br><span>marca:</span><br><input type="text" value="<?php echo $_POST['marca'];?>" name="marca">
+        <br><span>año:</span><br><input type="text" value="<?php echo $_POST['año'];?>" name="año">
+        <br><span>modelo:</span><br><input type="text" value="<?php echo $_POST['modelo'];?>" name="modelo">
+        <br><span>color:</span><br><input type="text" value="<?php echo $_POST['color'];?>" name="color">
+
+        <br><input class=" btn btn-primary" type="submit" value="ACTUALIZAR" name="tb_vehicu">
+
+    </form>
+
+
+</div>
